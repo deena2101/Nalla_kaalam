@@ -1,0 +1,548 @@
+/* ==========================================================================
+   NALLA KAALAM™ (നല്ല കാലം) - Master Vanilla Design System
+   1990s Kerala Astrologer Parlour + Cursed Govt Aesthetic + Meme Engine
+   ========================================================================== */
+
+:root {
+  --bg-dark: #120d09;
+  --bg-card: #1c1510;
+  --parchment-light: #fdfaf2;
+  --parchment-base: #f7eed8;
+  --parchment-mid: #eedebb;
+  --parchment-dark: #debfa0;
+  --vermilion: #8b1818;
+  --vermilion-bright: #c42424;
+  --vermilion-glow: rgba(196, 36, 36, 0.4);
+  --gold: #d4af37;
+  --gold-bright: #f3cf58;
+  --gold-dark: #997819;
+  --ink-black: #1a120b;
+  --ink-brown: #453222;
+  --stamp-red: #c92a2a;
+  --stamp-green: #1e7e34;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Manjari', 'Gayathri', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-dark);
+  background-image: 
+    radial-gradient(circle at 50% 15%, #2d180f 0%, #120d09 70%),
+    repeating-linear-gradient(45deg, rgba(212, 175, 55, 0.03) 0px, rgba(212, 175, 55, 0.03) 2px, transparent 2px, transparent 12px);
+  color: #eedebb;
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+/* Typography Helpers */
+.font-cinzel { font-family: 'Cinzel', serif; }
+.font-manjari { font-family: 'Manjari', sans-serif; }
+.font-gayathri { font-family: 'Gayathri', sans-serif; }
+.font-chilanka { font-family: 'Chilanka', cursive; }
+
+/* Layout Containers */
+.app-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem 3rem 1rem;
+}
+
+/* Navigation Header */
+.nk-navbar {
+  background: rgba(22, 16, 12, 0.95);
+  border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding: 0.75rem 1.25rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.nk-nav-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nk-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nk-brand-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #8b1818 0%, #3a0808 100%);
+  border: 2px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+  animation: mystic-pulse 3s infinite ease-in-out;
+}
+
+.nk-brand-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: var(--gold-bright);
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nk-tag-badge {
+  font-size: 0.7rem;
+  background: #541111;
+  color: #ffc4c4;
+  border: 1px solid #8b1818;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-family: 'Manjari', sans-serif;
+  font-weight: 700;
+}
+
+.nk-brand-sub {
+  font-size: 0.75rem;
+  color: #d1b896;
+  font-style: italic;
+}
+
+/* Parchment Card */
+.parchment-sheet {
+  background: var(--parchment-base);
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.4) 0%, transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(184, 134, 11, 0.08) 0%, transparent 40%),
+    linear-gradient(to bottom, #fcf6ea 0%, #f7eed8 40%, #eddabb 100%);
+  color: var(--ink-black);
+  border: 4px double var(--vermilion);
+  box-shadow: 
+    0 15px 40px rgba(0, 0, 0, 0.7),
+    0 0 0 1px #450c0c,
+    inset 0 0 50px rgba(184, 134, 11, 0.18),
+    inset 0 0 100px rgba(139, 24, 24, 0.06);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .parchment-sheet {
+    padding: 2.25rem;
+  }
+}
+
+/* Astrological Ornament Borders */
+.astro-header-border {
+  border-bottom: 2px dashed var(--gold-dark);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+/* Rubber Stamps */
+.rubber-stamp {
+  display: inline-block;
+  padding: 6px 14px;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  color: var(--stamp-red);
+  border: 3px solid var(--stamp-red);
+  border-radius: 6px;
+  transform: rotate(-6deg);
+  box-shadow: 0 0 0 1px rgba(201, 42, 42, 0.25);
+  text-shadow: 0 0 1px rgba(201, 42, 42, 0.4);
+  background: rgba(255, 245, 245, 0.3);
+}
+
+.rubber-stamp.green {
+  color: var(--stamp-green);
+  border-color: var(--stamp-green);
+  transform: rotate(4deg);
+  background: rgba(240, 255, 240, 0.3);
+}
+
+.rubber-stamp.huge {
+  font-size: 1.1rem;
+  padding: 8px 20px;
+  border-width: 4px;
+  transform: rotate(-8deg);
+  animation: stamp-slam 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes stamp-slam {
+  0% { transform: scale(3) rotate(-25deg); opacity: 0; }
+  100% { transform: scale(1) rotate(-8deg); opacity: 1; }
+}
+
+/* Buttons */
+.btn-vedic-red {
+  background: linear-gradient(135deg, #a31c1c 0%, #6e1010 100%);
+  color: #fff9e6;
+  border: 2px solid var(--gold);
+  padding: 0.85rem 1.75rem;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 1.05rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  box-shadow: 0 4px 15px rgba(139, 24, 24, 0.5), inset 0 1px 2px rgba(255, 255, 255, 0.3);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+.btn-vedic-red:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #bd2424 0%, #831313 100%);
+  box-shadow: 0 8px 25px rgba(196, 36, 36, 0.6), 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.btn-vedic-red:active {
+  transform: translateY(1px);
+}
+
+.btn-vedic-gold {
+  background: linear-gradient(135deg, #ecdcb9 0%, #d8c397 100%);
+  color: var(--ink-black);
+  border: 2px solid var(--gold-dark);
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.btn-vedic-gold:hover {
+  background: linear-gradient(135deg, #f4e8cb 0%, #e0cda5 100%);
+  border-color: var(--vermilion);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Animations */
+@keyframes mystic-pulse {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.4)); }
+  50% { transform: scale(1.08); filter: drop-shadow(0 0 18px rgba(212, 175, 55, 0.8)); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 22s linear infinite;
+}
+
+@keyframes flicker-lamp {
+  0%, 100% { opacity: 0.9; transform: scale(1); }
+  25% { opacity: 0.75; transform: scale(0.96) rotate(-1deg); }
+  50% { opacity: 1; transform: scale(1.04) rotate(1deg); filter: drop-shadow(0 0 20px #ff9900); }
+  75% { opacity: 0.85; transform: scale(0.98); }
+}
+
+.oil-lamp-flame {
+  display: inline-block;
+  animation: flicker-lamp 1.5s infinite ease-in-out;
+  transform-origin: center bottom;
+}
+
+/* Nilavilakku / Temple Corner Lamp Styling */
+.temple-lamp {
+  font-size: 2.2rem;
+  filter: drop-shadow(0 0 10px rgba(255, 170, 0, 0.6));
+}
+
+/* Responsive Grid Helpers */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Interactive Kavadi Shell Board */
+.kavadi-board {
+  background: #380a0a;
+  border: 3px solid var(--gold);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: inset 0 0 25px rgba(0,0,0,0.7), 0 8px 25px rgba(0,0,0,0.5);
+  text-align: center;
+  margin: 1.25rem 0;
+}
+
+.kavadi-tray {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+}
+
+.kavadi-shell {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #fffdf7 0%, #e6d8ba 60%, #a8946e 100%);
+  border: 2px solid #6b5028;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  user-select: none;
+}
+
+.kavadi-shell.rolling {
+  animation: shell-shake 0.5s infinite;
+}
+
+@keyframes shell-shake {
+  0%, 100% { transform: rotate(0deg) scale(1.1); }
+  25% { transform: rotate(-25deg) translateY(-8px); }
+  75% { transform: rotate(25deg) translateY(-4px); }
+}
+
+/* Kerala 12-House Astrology Grid (Rasichakram) */
+.kerala-rasi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 3px;
+  background: var(--vermilion);
+  border: 3px solid var(--vermilion);
+  border-radius: 8px;
+  max-width: 360px;
+  margin: 0 auto;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.rasi-cell {
+  background: #fdfaf0;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  text-align: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+  overflow: hidden;
+}
+
+.rasi-cell:hover {
+  background: #ffecc4;
+  transform: scale(1.05);
+  z-index: 5;
+}
+
+.rasi-cell-center {
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 2;
+  background: #f5ecd3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed var(--vermilion);
+  text-align: center;
+  padding: 6px;
+}
+
+/* Live Cam Filter Reticle */
+.camera-scanner-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  aspect-ratio: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 3px solid var(--vermilion);
+  background: #000;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+}
+
+.scanner-laser-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #ff3333, #ffff44, #ff3333, transparent);
+  box-shadow: 0 0 12px #ff2222;
+  animation: laser-sweep 2s ease-in-out infinite alternate;
+  z-index: 10;
+}
+
+@keyframes laser-sweep {
+  0% { top: 0%; opacity: 0.9; }
+  100% { top: 97%; opacity: 0.9; }
+}
+
+/* Stat Bar Component */
+.stat-bar-box {
+  background: #f2e6cb;
+  border: 1px solid rgba(139, 24, 24, 0.25);
+  border-radius: 8px;
+  padding: 0.75rem 0.9rem;
+  margin-bottom: 0.6rem;
+}
+
+.stat-bar-track {
+  width: 100%;
+  height: 8px;
+  background: #e3d3b0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 6px 0;
+  border: 1px solid #c9b48c;
+}
+
+.stat-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #991c1c, #d4af37);
+  transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Savage Ammavan Audio Note Bar */
+.ammavan-voice-note {
+  background: #0b1f13;
+  border: 2px solid #25d366;
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  color: #fff;
+  margin: 1rem 0;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
+}
+
+.voice-note-play-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #0b1f13;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.voice-note-waves {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  flex: 1;
+  height: 24px;
+}
+
+.wave-bar {
+  width: 3px;
+  background: #25d366;
+  border-radius: 2px;
+  opacity: 0.7;
+}
+
+.wave-bar.active {
+  animation: wave-bounce 0.6s infinite ease-in-out alternate;
+}
+
+@keyframes wave-bounce {
+  0% { height: 4px; }
+  100% { height: 22px; }
+}
+
+/* Inputs & Form Controls */
+.nk-input {
+  width: 100%;
+  background: #fffdf7;
+  border: 2px solid #b89b70;
+  border-radius: 8px;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.95rem;
+  color: var(--ink-black);
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.nk-input:focus {
+  border-color: var(--vermilion);
+  box-shadow: 0 0 0 3px rgba(139, 24, 24, 0.15);
+}
+
+.nk-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #4a1212;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.35rem;
+}

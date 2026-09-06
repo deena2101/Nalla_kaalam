@@ -8,7 +8,7 @@ A Malayalam meme + fake astrology + personality roasting machine that has zero p
 ---
 
 ## Basic Details
-### Team Name: Jathaka.exe (നവഗ്രഹ റോസ്റ്റേഴ്സ്)
+### Team Name: Seiso
 
 ### Team Members
 - Team Lead: [Deena George] - [Viswajyothi College of Engineering And Technology]

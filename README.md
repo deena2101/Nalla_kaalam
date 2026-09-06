@@ -88,10 +88,10 @@ Open [http://localhost:5174/](http://localhost:5174/) in your browser.
 ![Landing Screen](Landing_page.png)  
 *Landing Altar: The 1990s Kerala Astrologer Parlour featuring Nilavilakku oil lamps and the iconic CTA "🔮 എന്റെ ജീവിതം നശിപ്പിക്കൂ".*
 
-![Photo Scan & Chandanam](https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80)  
+![Photo Scan & Chandanam](photo_upload.png)  
 *AI Face Scanner HUD: Real-time laser scanning reticle with the "✨ ചന്ദനക്കുറി വരയ്ക്കൂ" filter painted on HTML5 Canvas.*
 
-![Jathakam Card Result](https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80)  
+![Jathakam Card Result](final.png)  
 *Official Jathakam Certificate: 12-House Rasichakram, 6 Pillars of Fate, Relatable Dosham Card, and Savage Ammavan WhatsApp audio player.*
 
 ---
